@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customize Cookie - Nhom Nhom Store</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+
+
+<header class="header">
+ <div class="container">
+   <a href="index.html">
+   <img src="Brown Playful Baking Cookies Logo.png" alt="Nhom Nhom Store" class="logo">
+   </a>
+   <nav class="nav">
+     <ul>
+       <li><a href="index.html">Trang chủ</a></li>
+       <li><a href="shop.html">Mua sắm</a></li>
+       <li><a href="index.html#contact">Liên hệ</a></li>
+       <li><a href="tracking.html">Tra cứu đơn hàng</a></li>
+       <li id="cart"><a href="cart.html" ><i class="fa-solid fa-cart-arrow-down"></i></a></li>
+     </ul>
+   </nav>
+
+
+ </div>
+</header>
+
+
+<section class="custom-product container">
+<h2 class="section-title">Tùy chỉnh Cookie của bạn</h2>
+<div class="custom-box">
+
+
+<!-- SLIDESHOW -->
+
+
+<div class="custom-slider">
+
+
+<input type="radio" name="slide" id="slide1" checked>
+<input type="radio" name="slide" id="slide2">
+<input type="radio" name="slide" id="slide3">
+
+
+<div class="slides">
+
+
+<div class="slide">
+<img src="./assets/cookie_choco.png" alt="Chocochips Cookie">
+</div>
+
+
+<div class="slide">
+<img src="./assets/cookie_matcha.png" alt="Matcha Cookie">
+</div>
+
+
+<div class="slide">
+<img src="./assets/cookie_smore.png" alt="S'more Cookie">
+</div>
+</div>
+
+
+<div class="slider-nav">
+<label for="slide1"></label>
+<label for="slide2"></label>
+<label for="slide3"></label>
+</div>
+</div>
+
+
+<!-- CHỌN BÁNH -->
+
+
+<div class="custom-form">
+
+
+<h3>Chọn vị bánh</h3>
+<select id="flavor">
+   <option value="30000">Chocolate Chip</option>
+   <option value="35000">Matcha</option>
+   <option value="40000">S'more</option>
+</select>
+
+
+
+
+<h3>Chọn topping</h3>
+
+
+<div class="topping-list">
+<label><input type="checkbox" class="topping"> Marshmallow</label>
+<label><input type="checkbox" class="topping"> Socola Chips</label>
+<label><input type="checkbox" class="topping"> Kẹo M&M</label>
+<label><input type="checkbox" class="topping"> Hạnh nhân</label>
+</div>
+
+
+<h3>Số lượng</h3>
+<input type="number" id="quantity" value="1" min="1" max="20">
+
+
+<p>Tổng tiền: <span id="total-price">30000</span>đ</p>
+
+
+<a href="#popup" class="btn-add">Thêm vào giỏ hàng</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- POPUP -->
+
+
+<div id="popup" class="popup">
+<div class="popup-box">
+<p>Đã thêm vào giỏ hàng!</p>
+<a href="shop.html">Tiếp tục mua</a>
+<a href="#" class="close-btn">Đóng</a>
+</div>
+</div>
+
+
+<footer id="contact">
+<div class="container">
+<h3>Liên hệ với Nhom Nhom Store</h3>
+<p>Email: nhomnhomstore@gmail.com</p>
+<p>SĐT: 0900 123 456</p>
+<p>Instagram: @nhomnhomstore</p>
+</div>
+</footer>
+
+
+<script>
+
+
+function updatePrice(){
+
+
+let flavorPrice = parseInt(document.getElementById("flavor").value);
+
+
+let toppings = document.querySelectorAll(".topping");
+let toppingPrice = 0;
+
+
+toppings.forEach(t => {
+  if(t.checked){
+     toppingPrice += 10000;
+  }
+});
+
+
+let quantity = document.getElementById("quantity").value;
+
+
+let total = (flavorPrice + toppingPrice) * quantity;
+
+
+document.getElementById("total-price").innerText =
+total.toLocaleString("vi-VN") + " đ";
+}
+
+
+document.getElementById("flavor").addEventListener("change", updatePrice);
+document.querySelectorAll(".topping").forEach(t => {
+  t.addEventListener("change", updatePrice);
+});
+document.getElementById("quantity").addEventListener("input", updatePrice);
+
+
+updatePrice();
+
+
+</script>
+
+
+</body>
+</html>
+

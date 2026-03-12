@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Macaron - Nhom Nhom Store</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+<body>
+
+
+<header class="header">
+ <div class="container">
+   <img src="Brown Playful Baking Cookies Logo.png" alt="Nhom Nhom Store" class="logo">
+   <nav class="nav">
+     <ul>
+       <li><a href="index.html">Trang chủ</a></li>
+       <li><a href="shop.html">Mua sắm</a></li>
+       <li><a href="index.html#contact">Liên hệ</a></li>
+       <li><a href="tracking.html">Tra cứu đơn hàng</a></li>
+       <li id="cart"><a href="cart.html" ><i class="fa-solid fa-cart-arrow-down"></i></a></li>
+     </ul>
+   </nav>
+
+
+ </div>
+</header>
+
+
+<section class="custom-product container">
+<h2 class="section-title">Tùy chỉnh Macaron của bạn</h2>
+<div class="custom-box">
+
+<!-- SLIDESHOW -->
+
+
+<div class="custom-slider">
+
+
+<input type="radio" name="slide" id="slide1" checked>
+<input type="radio" name="slide" id="slide2">
+<input type="radio" name="slide" id="slide3">
+
+
+<div class="slides">
+
+
+<div class="slide">
+<img src="./assets/macaron.png" alt="Macaron">
+</div>
+
+
+<div class="slide">
+<img src="./assets/macaron.png" alt="Macaron">
+</div>
+
+
+<div class="slide">
+<img src="./assets/macaron.png" alt="Macaron">
+</div>
+</div>
+
+
+<div class="slider-nav">
+<label for="slide1"></label>
+<label for="slide2"></label>
+<label for="slide3"></label>
+</div>
+</div>
+
+
+
+
+
+<!-- CHỌN BÁNH -->
+
+
+<div class="custom-form">
+
+
+<h3>Chọn số lượng bánh</h3>
+
+
+<select>
+<option>Hộp 15 bánh</option>
+<option>Hộp 20 bánh</option>
+</select>
+
+
+
+
+<h3>Số lượng</h3>
+
+
+<input type="number" value="1" min="1" max="20">
+
+
+
+
+<a href="#popup" class="btn-add">Thêm vào giỏ hàng</a>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- POPUP -->
+
+
+<div id="popup" class="popup">
+<div class="popup-box">
+<p>Đã thêm vào giỏ hàng!</p>
+<a href="shop.html">Tiếp tục mua</a>
+</div>
+</div>
+
+
+<footer id="contact">
+<div class="container">
+<h3>Liên hệ với Nhom Nhom Store</h3>
+<p>Email: nhomnhomstore@gmail.com</p>
+<p>SĐT: 0900 123 456</p>
+<p>Instagram: @nhomnhomstore</p>
+</div>
+</footer>
+
+
+</body>
+</html>
+
