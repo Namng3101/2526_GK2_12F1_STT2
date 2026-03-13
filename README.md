@@ -36,6 +36,7 @@ Website được xây dựng bằng **HTML, CSS và JavaScript cơ bản** nhằ
 
 * Code chính phần giao diện website
 * Hỗ trợ xây dựng layout và chức năng các trang
+-Xác nhận
 
 **Trần Châu Anh**
 
